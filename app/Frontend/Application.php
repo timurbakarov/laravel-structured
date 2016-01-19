@@ -8,6 +8,23 @@ use Illuminate\Filesystem\Filesystem;
 class Application extends \App\Common\Application
 {
     /**
+     * The application namespace.
+     *
+     * @var string
+     */
+    protected $namespace = 'App\Frontend';
+
+    /**
+     * Get the path to the application "app" directory.
+     *
+     * @return string
+     */
+    public function path()
+    {
+        return $this->basePath.DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.'Frontend';
+    }
+
+    /**
      * Register all of the configured providers.
      *
      * @return void
